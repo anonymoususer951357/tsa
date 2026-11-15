@@ -1,0 +1,23 @@
+services:
+  tsa:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tsa-iclr:repro
+    working_dir: /workspace/tsa
+    stdin_open: true
+    tty: true
+    environment:
+      DATA_DIR: /workspace/tsa/reproduce/data
+      WEIGHTS_DIR: /workspace/tsa/reproduce/weights
+      SAVE_DIR: /workspace/tsa/save_reproduce
+      WANDB_MODE: ${WANDB_MODE:-disabled}
+      NVIDIA_VISIBLE_DEVICES: "0"
+    gpus:
+      - driver: nvidia
+        device_ids: ["0"]
+        capabilities: [gpu]
+    shm_size: "16gb"
+    volumes:
+      - ./:/workspace/tsa
+    command: ["bash"]

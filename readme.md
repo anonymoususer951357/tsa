@@ -1,4 +1,4 @@
-# TSA — Temporal Slot Attention
+# TSA: Temporal Slot Activation for Persistent Object-Centric Video Representation
 
 ## How to Use
 
@@ -28,14 +28,14 @@ docker compose build
 
 **(2) Data and weights**
 
-`reproduce/data` and `reproduce/weights` are already in the repo. Download MOVi-C, MOVi-E, and YTVIS-HQ from the [RandSF.Q releases](https://github.com/Genera1Z/RandSF.Q/releases).
+Download MOVi-C, MOVi-E, and YTVIS-HQ from the [RandSF.Q releases](https://github.com/Genera1Z/RandSF.Q/releases).
 
 | Dataset | Release |
 |---|---|
 | MOVi-C | https://github.com/Genera1Z/RandSF.Q/releases/tag/dataset-movi_c |
 | MOVi-E | https://github.com/Genera1Z/RandSF.Q/releases/tag/dataset-movi_e |
 | YTVIS-HQ | https://github.com/Genera1Z/RandSF.Q/releases/tag/dataset-ytvis_hq |
-| OVIS | LINK |
+| OVIS | https://github.com/anonymoususer951357/tsa/releases/tag/data-ovis |
 
 Put the extracted LMDB files in the matching folder. Each split is one file:
 
@@ -51,7 +51,18 @@ reproduce/data/
   ovis/val.lmdb
 ```
 
-Download the checkpoints from [here](CHECKPOINT_LINK) and put them into `reproduce/weights`. There are three checkpoints per method and dataset, named `weight1.pth`, `weight2.pth`, and `weight3.pth`:
+Download the checkpoints and put them into `reproduce/weights`:
+
+| Method | Checkpoint |
+|---|---|
+| TSA | [weights-tsa.zip](https://github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-tsa.zip) |
+| SmoothSA | [weights-smoothsa.zip](https://github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-smoothsa.zip) |
+| SlotContrast | [weights-slotcontrast.zip](https://github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-slotcontrast.zip) |
+| VideoSAUR | [weights-videosaur.zip](https://github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-videosaur.zip) |
+| RandSF.Q (SSC) | [weights-randsfq_ssc.zip](https://github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-randsfq_ssc.zip) |
+| RandSF.Q (TSIM) | [weights-randsfq_tsim.zip](https://github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-randsfq_tsim.zip) |
+
+There are three checkpoints per method and dataset, named `weight1.pth`, `weight2.pth`, and `weight3.pth`:
 
 ```shell
 reproduce/weights/
@@ -138,4 +149,6 @@ TSA configs:
 | `config-tsa/tsa_recogn-ytvis_hq.py` | object recognition downstream |
 | `config-tsa/tsa_dynamic-ytvis_hq.py` | dynamics prediction downstream |
 
-This source code is built on [RandSF.Q](https://github.com/Genera1Z/RandSF.Q).
+## Acknowledgement
+
+This code builds on the public [RandSF.Q](https://github.com/Genera1Z/RandSF.Q) codebase.

@@ -35,7 +35,7 @@ Download MOVi-C, MOVi-E, and YTVIS-HQ from the [RandSF.Q releases](https://githu
 | MOVi-C | https://github.com/Genera1Z/RandSF.Q/releases/tag/dataset-movi_c |
 | MOVi-E | https://github.com/Genera1Z/RandSF.Q/releases/tag/dataset-movi_e |
 | YTVIS-HQ | https://github.com/Genera1Z/RandSF.Q/releases/tag/dataset-ytvis_hq |
-| OVIS | https://github.com/anonymoususer951357/tsa/releases/tag/data-ovis |
+| OVIS | https://www.github.com/anonymoususer951357/tsa/releases/tag/data-ovis |
 
 Put the extracted LMDB files in the matching folder. Each split is one file:
 
@@ -55,12 +55,12 @@ Download the checkpoints and put them into `reproduce/weights`:
 
 | Method | Checkpoint |
 |---|---|
-| TSA | [weights-tsa.zip](https://github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-tsa.zip) |
-| SmoothSA | [weights-smoothsa.zip](https://github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-smoothsa.zip) |
-| SlotContrast | [weights-slotcontrast.zip](https://github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-slotcontrast.zip) |
-| VideoSAUR | [weights-videosaur.zip](https://github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-videosaur.zip) |
-| RandSF.Q (SSC) | [weights-randsfq_ssc.zip](https://github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-randsfq_ssc.zip) |
-| RandSF.Q (TSIM) | [weights-randsfq_tsim.zip](https://github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-randsfq_tsim.zip) |
+| TSA | [weights-tsa.zip](https://www.github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-tsa.zip) |
+| SmoothSA | [weights-smoothsa.zip](https://www.github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-smoothsa.zip) |
+| SlotContrast | [weights-slotcontrast.zip](https://www.github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-slotcontrast.zip) |
+| VideoSAUR | [weights-videosaur.zip](https://www.github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-videosaur.zip) |
+| RandSF.Q (SSC) | [weights-randsfq_ssc.zip](https://www.github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-randsfq_ssc.zip) |
+| RandSF.Q (TSIM) | [weights-randsfq_tsim.zip](https://www.github.com/anonymoususer951357/tsa/releases/download/checkpoints/weights-randsfq_tsim.zip) |
 
 There are three checkpoints per method and dataset, named `weight1.pth`, `weight2.pth`, and `weight3.pth`:
 
